@@ -1,4 +1,4 @@
-package com.zaurtregulov.spring.rest.configuration;
+package com.soslanzagagov.springrest.configuration;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import org.springframework.context.annotation.Bean;
@@ -14,11 +14,12 @@ import java.beans.PropertyVetoException;
 import java.util.Properties;
 
 @Configuration
-@ComponentScan(basePackages = "com.zaurtregulov.spring.rest")
+//В каком пакете осуществлять сканирование и поиск компонентов
+@ComponentScan(basePackages = "com.soslanzagagov.springrest")
 @EnableWebMvc
 @EnableTransactionManagement
 public class MyConfig {
-
+    //    Connection pool для подключения к БД
     @Bean
     public DataSource dataSource(){
         ComboPooledDataSource dataSource = new ComboPooledDataSource();
@@ -33,11 +34,12 @@ public class MyConfig {
         return dataSource;
     }
 
+    //    Получаем сессии с помошью которых мы и подключаемся к БД
     @Bean
     public LocalSessionFactoryBean sessionFactory(){
         LocalSessionFactoryBean  sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan("com.zaurtregulov.spring.rest.entity");
+        sessionFactory.setPackagesToScan("com.soslanzagagov.springrest.entity");
 
         Properties hibernateProperties = new Properties();
         hibernateProperties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
@@ -47,6 +49,7 @@ public class MyConfig {
         return sessionFactory;
     }
 
+    //    Позволяет не заморачиваться с открытием и закрытием транзакций
     @Bean
     public HibernateTransactionManager transactionManager(){
         HibernateTransactionManager transactionManager = new HibernateTransactionManager();
