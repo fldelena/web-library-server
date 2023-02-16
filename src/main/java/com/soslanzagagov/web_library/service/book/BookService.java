@@ -1,6 +1,6 @@
-package com.soslanzagagov.springrest.service.book;
+package com.soslanzagagov.web_library.service.book;
 
-import com.soslanzagagov.springrest.entity.Book;
+import com.soslanzagagov.web_library.entity.Book;
 
 import java.util.List;
 

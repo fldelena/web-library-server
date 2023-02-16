@@ -1,7 +1,7 @@
-package com.soslanzagagov.springrest.service.book;
+package com.soslanzagagov.web_library.service.book;
 
-import com.soslanzagagov.springrest.dao.book.BookDAO;
-import com.soslanzagagov.springrest.entity.Book;
+import com.soslanzagagov.web_library.dao.book.BookDAO;
+import com.soslanzagagov.web_library.entity.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

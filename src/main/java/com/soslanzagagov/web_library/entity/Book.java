@@ -1,4 +1,4 @@
-package com.soslanzagagov.springrest.entity;
+package com.soslanzagagov.web_library.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

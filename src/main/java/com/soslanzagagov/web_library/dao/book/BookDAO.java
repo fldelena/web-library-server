@@ -1,6 +1,6 @@
-package com.soslanzagagov.springrest.dao.book;
+package com.soslanzagagov.web_library.dao.book;
 
-import com.soslanzagagov.springrest.entity.Book;
+import com.soslanzagagov.web_library.entity.Book;
 
 import java.util.List;
 

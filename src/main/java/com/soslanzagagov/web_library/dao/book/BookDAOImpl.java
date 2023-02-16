@@ -1,6 +1,6 @@
-package com.soslanzagagov.springrest.dao.book;
+package com.soslanzagagov.web_library.dao.book;
 
-import com.soslanzagagov.springrest.entity.Book;
+import com.soslanzagagov.web_library.entity.Book;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;

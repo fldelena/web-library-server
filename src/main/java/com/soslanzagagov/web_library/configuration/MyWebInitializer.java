@@ -1,4 +1,4 @@
-package com.soslanzagagov.springrest.configuration;
+package com.soslanzagagov.web_library.configuration;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 

@@ -1,7 +1,7 @@
-package com.soslanzagagov.springrest.controller;
+package com.soslanzagagov.web_library.controller;
 
-import com.soslanzagagov.springrest.entity.Book;
-import com.soslanzagagov.springrest.service.book.BookService;
+import com.soslanzagagov.web_library.entity.Book;
+import com.soslanzagagov.web_library.service.book.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

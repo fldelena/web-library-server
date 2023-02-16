@@ -1,4 +1,4 @@
-package com.soslanzagagov.springrest.configuration;
+package com.soslanzagagov.web_library.configuration;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import org.springframework.context.annotation.Bean;
@@ -15,7 +15,7 @@ import java.util.Properties;
 
 @Configuration
 //В каком пакете осуществлять сканирование и поиск компонентов
-@ComponentScan(basePackages = "com.soslanzagagov.springrest")
+@ComponentScan(basePackages = "com.soslanzagagov.web_library")
 @EnableWebMvc
 @EnableTransactionManagement
 public class MyConfig {
@@ -39,7 +39,7 @@ public class MyConfig {
     public LocalSessionFactoryBean sessionFactory(){
         LocalSessionFactoryBean  sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan("com.soslanzagagov.springrest.entity");
+        sessionFactory.setPackagesToScan("com.soslanzagagov.web_library.entity");
 
         Properties hibernateProperties = new Properties();
         hibernateProperties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
