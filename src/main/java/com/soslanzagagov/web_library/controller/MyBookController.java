@@ -22,29 +22,29 @@ public class MyBookController {
     BookService bookService;
 
     @GetMapping("/books")
-    public List<Book> getAllBooks(){
+    public List<Book> getAllBooks() {
         return bookService.getAllBooks();
     }
 
     @GetMapping("/books/{id}")
-    public Book getBook(@PathVariable int id){
+    public Book getBook(@PathVariable int id) {
         return bookService.getBook(id);
     }
 
     @PostMapping("/books")
-    public Book addBook(@RequestBody Book book){
+    public Book addBook(@RequestBody Book book) {
         bookService.saveBook(book);
         return book;
     }
 
     @PutMapping("/books")
-    public Book changeBook(@RequestBody Book book){
+    public Book changeBook(@RequestBody Book book) {
         bookService.saveBook(book);
         return book;
     }
 
     @DeleteMapping("/books/{id}")
-    public String deleteBook(@PathVariable int id){
+    public String deleteBook(@PathVariable int id) {
         return bookService.deleteBook(id);
     }
 }

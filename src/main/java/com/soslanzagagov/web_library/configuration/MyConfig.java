@@ -21,7 +21,7 @@ import java.util.Properties;
 public class MyConfig {
     //    Connection pool для подключения к БД
     @Bean
-    public DataSource dataSource(){
+    public DataSource dataSource() {
         ComboPooledDataSource dataSource = new ComboPooledDataSource();
         try {
             dataSource.setDriverClass("com.mysql.cj.jdbc.Driver");
@@ -36,8 +36,8 @@ public class MyConfig {
 
     //    Получаем сессии с помошью которых мы и подключаемся к БД
     @Bean
-    public LocalSessionFactoryBean sessionFactory(){
-        LocalSessionFactoryBean  sessionFactory = new LocalSessionFactoryBean();
+    public LocalSessionFactoryBean sessionFactory() {
+        LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
         sessionFactory.setPackagesToScan("com.soslanzagagov.web_library.entity");
 
@@ -51,7 +51,7 @@ public class MyConfig {
 
     //    Позволяет не заморачиваться с открытием и закрытием транзакций
     @Bean
-    public HibernateTransactionManager transactionManager(){
+    public HibernateTransactionManager transactionManager() {
         HibernateTransactionManager transactionManager = new HibernateTransactionManager();
         transactionManager.setSessionFactory(sessionFactory().getObject());
         return transactionManager;

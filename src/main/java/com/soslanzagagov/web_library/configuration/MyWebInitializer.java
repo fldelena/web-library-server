@@ -15,7 +15,7 @@ public class MyWebInitializer extends AbstractAnnotationConfigDispatcherServletI
         return new Class[]{MyConfig.class};
     }
 
-//    url адрес для диспетчер сервлета
+    //    url адрес для диспетчер сервлета
     @Override
     protected String[] getServletMappings() {
         return new String[]{"/"};

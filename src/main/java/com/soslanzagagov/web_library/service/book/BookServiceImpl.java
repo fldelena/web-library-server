@@ -24,7 +24,7 @@ public class BookServiceImpl implements BookService {
     @Transactional
     public Book getBook(int id) {
         Book book = bookDAO.getBook(id);
-        if (book == null){
+        if (book == null) {
             throw null; // todo
         }
         return book;
@@ -40,7 +40,7 @@ public class BookServiceImpl implements BookService {
     @Transactional
     public String deleteBook(int id) {
         Book book = bookDAO.getBook(id);
-        if (book == null){
+        if (book == null) {
             throw null; // todo
         }
         bookDAO.deleteBook(id);
